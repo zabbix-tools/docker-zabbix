@@ -1,0 +1,2 @@
+deb http://archive.debian.org/debian squeeze main
+deb http://archive.debian.org/debian squeeze-lts main

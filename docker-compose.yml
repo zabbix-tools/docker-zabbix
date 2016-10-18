@@ -1,0 +1,55 @@
+version: '2'
+services:
+  zabbix-1.8:
+    image: cavaliercoder/zabbix:1.8
+    build:
+      dockerfile: zabbix-1.8.Dockerfile
+      context: .
+      args: [ http_proxy, https_proxy ]
+    ports:
+      - "8018:80"
+
+  zabbix-2.0:
+    image: cavaliercoder/zabbix:2.0
+    build:
+      dockerfile: zabbix-2.0.Dockerfile
+      context: .
+      args: [ http_proxy, https_proxy ]
+    ports:
+      - "8020:80"
+
+  zabbix-2.2:
+    image: cavaliercoder/zabbix:2.2
+    build:
+      dockerfile: zabbix-2.2.Dockerfile
+      context: .
+      args: [ http_proxy, https_proxy ]
+    ports:
+      - "8022:80"
+
+  zabbix-2.4:
+    image: cavaliercoder/zabbix:2.4
+    build:
+      dockerfile: zabbix-2.4.Dockerfile
+      context: .
+      args: [ http_proxy, https_proxy ]
+    ports:
+      - "8024:80"
+
+  zabbix-3.0:
+    image: cavaliercoder/zabbix:3.0
+    build:
+      dockerfile: zabbix-3.0.Dockerfile
+      context: .
+      args: [ http_proxy, https_proxy ]
+    ports:
+      - "8030:80"
+
+  zabbix-3.2:
+    image: cavaliercoder/zabbix:3.2
+    build:
+      dockerfile: zabbix-3.2.Dockerfile
+      context: .
+      args: [ http_proxy, https_proxy ]
+    ports:
+      - "8032:80"

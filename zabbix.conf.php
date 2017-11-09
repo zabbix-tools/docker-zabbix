@@ -6,8 +6,8 @@ $DB['TYPE']     = 'MYSQL';
 $DB['SERVER']   = 'localhost';
 $DB['PORT']     = '0';
 $DB['DATABASE'] = 'zabbix';
-$DB['USER']     = 'root';
-$DB['PASSWORD'] = '';
+$DB['USER']     = 'zabbix';
+$DB['PASSWORD'] = 'DBPassword';
 
 // SCHEMA is relevant only for IBM_DB2 database
 $DB['SCHEMA'] = '';

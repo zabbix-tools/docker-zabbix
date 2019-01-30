@@ -12,7 +12,8 @@ all: \
 	zabbix-2.4 \
 	zabbix-3.0 \
 	zabbix-3.2 \
-	zabbix-3.4
+	zabbix-3.4 \
+	zabbix-4.0
 
 zabbix-1.8:
 	$(DOCKER_BUILD) \
@@ -54,5 +55,11 @@ zabbix-3.4:
 	$(DOCKER_BUILD) \
 		-f zabbix-3.4.Dockerfile \
 		-t $(DOCKER_IMAGE):3.4 \
+		.
+
+zabbix-4.0:
+	$(DOCKER_BUILD) \
+		-f zabbix-4.0.Dockerfile \
+		-t $(DOCKER_IMAGE):4.0 \
 		-t $(DOCKER_IMAGE):latest \
 		.

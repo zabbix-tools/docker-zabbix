@@ -62,3 +62,12 @@ services:
       args: [ http_proxy, https_proxy ]
     ports:
       - "8034:80"
+
+  zabbix-4.0:
+    image: cavaliercoder/zabbix:4.0
+    build:
+      dockerfile: zabbix-4.0.Dockerfile
+      context: .
+      args: [ http_proxy, https_proxy ]
+    ports:
+      - "8040:80"

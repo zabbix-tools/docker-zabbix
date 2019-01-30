@@ -1,7 +1,10 @@
 #!/bin/bash
+set -e
 
 # start and configure mysql
 echo "==> Starting MySQL..."
+# touch required on overlay2: https://github.com/docker/for-linux/issues/72#issuecomment-319904698
+find /var/lib/mysql -type f -exec touch {} \;
 /etc/init.d/mysql start
 
 echo "==> Creating Zabbix database..."

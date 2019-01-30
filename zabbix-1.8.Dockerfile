@@ -2,7 +2,7 @@ FROM debian:squeeze
 
 ENV DEBIAN_FRONTEND noninteractive
 
-# fix deprecated debian:squeeze repos
+# ignore deprecated debian:squeeze repos and expired keys
 COPY squeeze.sources.list /etc/apt/sources.list
 COPY squeeze.apt.conf /etc/apt/apt.conf
 
